@@ -1,0 +1,42 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"make"
+			],
+			"name": "build"
+		},
+		{
+			"cmd":
+			[
+				"make",
+				"test"
+			],
+			"name": "build test"
+		}
+	],
+
+	"settings": {
+		"sublimeclang_options": [
+			"-I${project_path}/src"
+		]
+	},
+
+	"folders":
+	[
+		{
+			"name": "test",
+			"path": "test"
+		},
+		{
+			"name": "source",
+			"path": "src"
+		},
+		{
+			"name": "root",
+			"path": "./"
+		}
+	]
+}
