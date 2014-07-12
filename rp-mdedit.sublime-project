@@ -4,7 +4,9 @@
 		{
 			"cmd":
 			[
-				"make"
+				"make",
+				"-f",
+				"${project_path}/Makefile"
 			],
 			"name": "build"
 		},
@@ -12,6 +14,8 @@
 			"cmd":
 			[
 				"make",
+				"-f",
+				"${project_path}/Makefile",
 				"test"
 			],
 			"name": "build test"

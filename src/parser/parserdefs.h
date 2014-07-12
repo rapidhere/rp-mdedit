@@ -5,6 +5,10 @@
 
 RNAMESPACE_START
 
+/**
+ * Error codes
+ */
+#define MD_PARSER_UNKOWN_DIALECT 1			// Unkown dialect
 
 RNAMESPACE_END
 

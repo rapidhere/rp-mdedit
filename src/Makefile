@@ -15,7 +15,8 @@ build-includes: $(INCLUDES) | $(BUILD_DIR)/src
 build-parser: $(BASE_DIR)/src/parser
 	@cd ./parser; $(MAKE) $(MFLAGS)
 
-$(OBJECTS):
+$(OBJECTS): %.o: %.cpp
+	$(CXX) $(INCLUDE_DIRS) $(LIB_DIRS) $(LIBS) $(FLAGS) -c $< -o $@
 
 $(BUILD_DIR)/src:
 	@echo "Make build dir $(BUILD_DIR)/src"

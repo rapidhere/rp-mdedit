@@ -1,13 +1,15 @@
 all: make-source
 
-include ./Makefile.inc
+P_DIR = /home/rapid/Desktop/repository/rp-mdedit
+
+include $(P_DIR)/Makefile.inc
 
 .PHONY: make-source clean clean-src all
 
-make-source:
-	@cd ./src; $(MAKE) $(MFLAGS)
+make-source: $(P_DIR)/src
+	@cd $(P_DIR)/src; $(MAKE) $(MFLAGS)
 
 clean: clean-src
 
-clean-src: $(abspath ./src)
-	@cd ./src; $(MAKE) $(MFLAGS) clean
+clean-src: $(P_DIR)/src
+	@cd $(P_DIR)/src; $(MAKE) $(MFLAGS) clean
